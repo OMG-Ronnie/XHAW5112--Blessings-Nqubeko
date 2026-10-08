@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Calculate Fees | Adventure Escape SA</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">AE</span><span
+          class="brand-text"><span class="brand-green">ADVENTURE</span><span>ESCAPE SA</span></span></a><button
+        class="nav-toggle" onclick="toggleNav()">☰</button>
+      <nav><a href="index.html">Home</a><a href="about-us.html">About Us</a><a href="activities.html">Activities</a><a
+          class="active" href="calculate-fees.html">Calculate Fees</a><a href="contact-us.html">Contact Us</a></nav><a
+        class="btn btn-small" href="calculate-fees.html">BOOK NOW</a>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="container"><span class="eyebrow dark">Plan your trip</span>
+        <h1>Calculate Fees</h1>
+        <p>Use the quantities and guest count to estimate the total cost of your adventure.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container calc-layout">
+        <div class="calculator-panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow dark">Choose activities</span>
+              <h2>Build your booking</h2>
+            </div><span class="secure">● Secure estimate</span>
+          </div>
+          <div class="activity-option">
+            <div class="option-main"><img src="images/ultimate-adventure-day.png" alt="Ultimate Adventure Day">
+              <div>
+                <h3>Ultimate Adventure Day</h3>
+                <p>Package</p>
+              </div>
+            </div>
+            <div><span class="price">R1,500</span><input class="qty" type="number" min="0" value="1" data-price="1500">
+            </div>
+          </div>
+          <div class="activity-option">
+            <div class="option-main"><img src="images/family-explorer-package.png" alt="Family Explorer Package">
+              <div>
+                <h3>Family Explorer Package</h3>
+                <p>Package</p>
+              </div>
+            </div>
+            <div><span class="price">R1,500</span><input class="qty" type="number" min="0" value="0" data-price="1500">
+            </div>
+          </div>
+          <div class="activity-option">
+            <div class="option-main"><img src="images/mountain-adventure-package.png" alt="Mountain Adventure Package">
+              <div>
+                <h3>Mountain Adventure Package</h3>
+                <p>Package</p>
+              </div>
+            </div>
+            <div><span class="price">R1,500</span><input class="qty" type="number" min="0" value="0" data-price="1500">
+            </div>
+          </div>
+          <div class="activity-option">
+            <div class="option-main"><img src="images/corporate-team-challenge.png" alt="Corporate Team Challenge">
+              <div>
+                <h3>Corporate Team Challenge</h3>
+                <p>Package</p>
+              </div>
+            </div>
+            <div><span class="price">R1,500</span><input class="qty" type="number" min="0" value="0" data-price="1500">
+            </div>
+          </div>
+          <div class="activity-option">
+            <div class="option-main"><img src="images/kayaking-experience.png" alt="Kayaking Experience">
+              <div>
+                <h3>Kayaking Experience</h3>
+                <p>Activity</p>
+              </div>
+            </div>
+            <div><span class="price">R750</span><input class="qty" type="number" min="0" value="0" data-price="750">
+            </div>
+          </div>
+          <div class="activity-option">
+            <div class="option-main"><img src="images/rock-climbing-session.png" alt="Rock Climbing Session">
+              <div>
+                <h3>Rock Climbing Session</h3>
+                <p>Activity</p>
+              </div>
+            </div>
+            <div><span class="price">R750</span><input class="qty" type="number" min="0" value="0" data-price="750">
+            </div>
+          </div>
+          <div class="people-control"><label for="people">Number of guests</label><input id="people" type="number"
+              min="1" value="1"></div><button class="btn full" onclick="calculateTotal()">Calculate total</button>
+          <div class="calculator-message" id="calculatorMessage"></div>
+        </div>
+        <aside class="order-summary"><span class="eyebrow dark">Order summary</span>
+          <h2>Your estimate</h2>
+          <div id="summaryLines"></div>
+          <div class="summary-total"><span>Total</span><strong id="grandTotal">R0</strong></div><a
+            class="btn btn-light full" href="contact-us.html">Continue to booking →</a>
+          <p class="small-note">Prices are based on the package fees displayed in the supplied screens.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <section class="plan-band">
+    <div class="container plan-inner">
+      <div>
+        <span class="eyebrow">Plan your adventure</span>
+        <h2>Plan Your Adventure Today</h2>
+        <p>Get personalized rate sheets or start adding activities to receive a bulk booking discount. Our team is ready
+          to help you plan the perfect Western Cape escape.</p>
+      </div>
+      <div class="plan-actions">
+        <a class="btn btn-orange" href="contact-us.html">Request Quotation</a>
+        <a class="btn btn-outline" href="activities.html">Browse All Activities</a>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html"><span class="brand-mark">AE</span><span class="brand-text"><span
+              class="brand-green">ADVENTURE</span><span>ESCAPE SA</span></span></a>
+        <p>Your premier outdoor adventure booking platform based in the Western Cape, South Africa. Discover, plan, and
+          book your next escape.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4><a href="index.html">Home</a><a href="about-us.html">About Us</a><a
+          href="activities.html">Activities</a><a href="calculate-fees.html">Calculate Fees</a><a
+          href="contact-us.html">Contact Us</a>
+      </div>
+      <div>
+        <h4>Adventures</h4><a href="ultimate-adventure-day.html">Ultimate Adventure Day</a><a
+          href="family-explorer-package.html">Family Explorer Package</a><a
+          href="mountain-adventure-package.html">Mountain Adventure Package</a><a
+          href="corporate-team-challenge.html">Corporate Team Challenge</a><a href="kayaking-experience.html">Kayaking
+          Experience</a><a href="rock-climbing-session.html">Rock Climbing Session</a>
+      </div>
+      <div>
+        <h4>Contact Details</h4>
+        <p>✉ info@adventureescape.co.za</p>
+        <p>☎ +27 (0) 21 555 4321</p>
+        <p>⌖ 12 Loop Street, Cape Town, 8001</p>
+        <p>◷ Mon–Fri: 08:00–17:00 SAST</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"><span>© 2026 Adventure Escape SA. All Rights Reserved.</span><span>Privacy Policy
+          &nbsp;&nbsp; Terms & Conditions &nbsp;&nbsp; Cape Town, South Africa</span></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
