@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "Adventure Escape SA",
+    "slug": "adventure-escape-sa",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "softwareKeyboardLayoutMode": "pan"
+    },
+    "plugins": [
+      "expo-asset"
+    ]
+  }
+}
