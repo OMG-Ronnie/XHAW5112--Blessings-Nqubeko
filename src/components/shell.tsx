@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Image, } from 'react-native';
 import { COLORS, SHADOW } from '../theme';
 import { TabKey } from '../navigation';
 
@@ -17,12 +17,16 @@ export const BRAND_COLORS = {
 
 export const BRAND_SHADOW = SHADOW;
 
-// ---------- App logo (pure vector, no asset needed) ----------
-export const Logo: React.FC<{ size?: number; light?: boolean }> = ({ size = 34, light }) => (
-  <View style={[styles.logo, { width: size, height: size }]}>
-    <Text style={[styles.logoText, { fontSize: size * 0.45 }]}>▲</Text>
-    <Text style={[styles.logoSub, { fontSize: size * 0.22 }]}>▲</Text>
-  </View>
+
+{/* App logo image */}
+export const Logo: React.FC<{ size?: number; light?: boolean }> = ({
+  size = 44,
+}) => (
+  <Image
+    source={require('../assets/logo.png')}
+    style={{ width: size, height: size }}
+    resizeMode="contain"
+  />
 );
 
 // ---------- Header with brand + hamburger menu ----------
@@ -119,16 +123,17 @@ export const TabBar: React.FC<{
 );
 
 const styles = StyleSheet.create({
-  header: {
-    backgroundColor: COLORS.card,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    paddingVertical: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: COLORS.border,
-  },
+header: {
+  backgroundColor: COLORS.card,
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  paddingHorizontal: 16,
+  paddingTop: 35,
+  paddingBottom: 15,
+  borderBottomWidth: 1,
+  borderBottomColor: COLORS.border,
+},
   headerBrand: { flexDirection: 'row', alignItems: 'center' },
   logo: {
     borderRadius: 8,
